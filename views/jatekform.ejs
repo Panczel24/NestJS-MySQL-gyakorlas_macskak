@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jatekform</title>
+</head>
+
+<body>
+    <a href="/">index</a>
+    <br>
+    <form method="post">
+        <input type="text" name="nev" placeholder="nev">
+        <button type="submit">Új játék</button>
+    </form>
+
+    <% if (hiba) { %>
+        <p style="color:red">
+            <%= hiba %>
+        </p>
+
+        <% } %>
+
+            <% if (jatek) { %>
+                <h2>Siker</h2>
+                <p>ID: <%= jatek.id %>
+                </p>
+                <p>Név: <%= jatek.nev %>
+                </p>
+                <% } %>
+
+</body>
+
+</html>
