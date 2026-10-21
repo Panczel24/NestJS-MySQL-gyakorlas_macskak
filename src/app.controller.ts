@@ -55,17 +55,19 @@ export class AppController {
 
     if (!nev || nev.trim() === '') {
       return {
-        hiba: 'A játék neve nem lehet üres!',
+         hiba: 'A játék neve nem lehet üres!',
         jatek: null,
+      };
+    } else {
+
+      const jatek = await this.appService.UjJatek(nev.trim());
+
+      return {
+        hiba: '',
+        jatek,
       };
     }
 
-    const jatek = await this.appService.UjJatek(nev.trim());
-
-    return {
-      hiba: '',
-      jatek,
-    };
   }
 }
 

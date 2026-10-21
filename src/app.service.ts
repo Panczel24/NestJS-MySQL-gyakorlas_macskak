@@ -10,6 +10,7 @@ const mysqlConnection = mysql.createPool({
   database: 'macska',
 });
 
+
 @Injectable()
 export class AppService {
   getHello(): string {
@@ -27,7 +28,7 @@ export class AppService {
 
   async getJatekok() {
     const [result] = await mysqlConnection.execute(
-      'SELECT id, nave FROM jatekok'
+      'SELECT id, nev FROM jatekok'
     );
     const rows = result as Jatekok[];
     return rows;

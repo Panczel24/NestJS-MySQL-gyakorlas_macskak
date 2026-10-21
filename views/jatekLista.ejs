@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Jateklista</title>
 </head>
+
 <body>
     <a href="/">index</a>
-    
-      <table>
+
+    <table>
         <thead>
-            <tr>id</tr>
-            <tr>nev</tr>
-            
+            <tr>
+                <td>id</td>
+                <td>suly</td>
+            </tr>
         </thead>
         <tbody>
-            <% for( let jatekok of jatekok) { %>
-            <tr>
-                <td><%= jatekok.id %></td>
-                <td><%= jatekok.nev %></td>
-            </tr>
-            <% } %>
+            <% for( let jatek of jatekok) { %>
+                <tr>
+                    <td>
+                        <%= jatek.id %>
+                    </td>
+                    <td>
+                        <%= jatek.nev %>
+                    </td>
+                </tr>
+                <% } %>
         </tbody>
 
 
 </body>
+
 </html>

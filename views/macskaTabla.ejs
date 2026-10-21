@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Macskatabla</title>
 </head>
+
 <body>
     <a href="/">index</a>
 
     <table>
         <thead>
-            <tr>id</tr>
-            <tr>suly</tr>
-            <tr>szem_szin</tr>
-            <tr>gazdi_id</tr>
-            <tr>jatek_id</tr>
+            <tr>
+                <td>id</td>
+                <td>suly</td>
+                <td>szem_szin</td>
+                <td>gazdi_id</td>
+                <td>jatek_id</td>
+            </tr>
         </thead>
         <tbody>
             <% for( let macska of macskak) { %>
-            <tr>
-                <td><%= macska.id %></td>
-                 <td><%= macska.suly %></td>
-                <td><%= macska.szem_szin %></td>
-                <td><%= macska.gazdi_id %></td>
-                <td><%= macska.jatek_id %></td>
-            </tr>
-            <% } %>
+                <tr>
+                    <td>
+                        <%= macska.id %>
+                    </td>
+                    <td>
+                        <%= macska.suly %>
+                    </td>
+                    <td>
+                        <%= macska.szem_szin %>
+                    </td>
+                    <td>
+                        <%= macska.gazdi_id %>
+                    </td>
+                    <td>
+                        <%= macska.jatek_id %>
+                    </td>
+                </tr>
+                <% } %>
         </tbody>
     </table>
 </body>
+
 </html>

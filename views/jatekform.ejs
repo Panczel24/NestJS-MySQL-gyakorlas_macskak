@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Jatekform</title>
 </head>
 
@@ -15,14 +16,14 @@
         <button type="submit">Új játék</button>
     </form>
 
-    <% if (hiba) { %>
+    <% if (locals.hiba) { %>
         <p style="color:red">
             <%= hiba %>
         </p>
 
         <% } %>
 
-            <% if (jatek) { %>
+            <% if (locals.jatek) { %>
                 <h2>Siker</h2>
                 <p>ID: <%= jatek.id %>
                 </p>
